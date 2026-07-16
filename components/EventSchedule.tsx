@@ -7,7 +7,7 @@ export function EventSchedule({ events, weddingDate }: { events: readonly Weddin
     <section id="lich-trinh" className="section schedule-section">
       <Reveal className="section-heading centered">
         <p className="eyebrow">Hẹn gặp bạn tại</p>
-        <h2>Ngày chúng mình về chung một nhà</h2>
+        <h2>Ngày chúng mình <span>về chung một nhà</span></h2>
       </Reveal>
       <Countdown target={weddingDate} />
       <div className="event-grid">

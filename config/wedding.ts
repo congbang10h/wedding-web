@@ -69,12 +69,12 @@ export const weddingConfig = {
   invitationCards: [
     {
       title: "Mặt trước thiệp cưới",
-      src: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=88",
+      src: "/invitations/thiep-cuoi-mat-truoc.png",
       downloadEnabled: true,
     },
     {
       title: "Mặt sau thiệp cưới",
-      src: "https://images.unsplash.com/photo-1460978812857-470ed1c77af0?auto=format&fit=crop&w=1200&q=88",
+      src: "/invitations/thiep-cuoi-mat-sau.png",
       downloadEnabled: true,
     },
   ],

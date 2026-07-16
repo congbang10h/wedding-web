@@ -16,7 +16,7 @@ export function GiftSection({ accounts }: { accounts: readonly Account[] }) {
     <section id="qua-mung" className="section gift-section">
       <Reveal className="section-heading centered light">
         <p className="eyebrow">With love</p>
-        <h2>Gửi quà mừng đến cô dâu chú rể</h2>
+        <h2>Gửi quà mừng <span>đến cô dâu chú rể</span></h2>
         <p>Sự hiện diện của bạn đã là món quà quý giá nhất đối với chúng tôi.</p>
       </Reveal>
       <div className="gift-grid">

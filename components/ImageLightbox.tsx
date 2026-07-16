@@ -29,12 +29,12 @@ export function ImageLightbox({ images, index, onChange, onClose }: { images: Li
   return (
     <div className="lightbox" role="dialog" aria-modal="true" aria-label={`Xem ảnh ${image.title}`} onClick={onClose}>
       <div className="lightbox-top"><span>{index + 1} / {images.length}</span><button onClick={onClose} aria-label="Đóng ảnh" type="button">×</button></div>
-      {images.length > 1 ? <button className="lightbox-arrow previous" onClick={(event) => { event.stopPropagation(); previous(); }} aria-label="Ảnh trước" type="button">‹</button> : null}
+      {images.length > 1 ? <button className="lightbox-arrow previous" onClick={(event) => { event.stopPropagation(); previous(); }} aria-label="Ảnh trước" type="button"><span className="lightbox-arrow-icon" aria-hidden="true" /></button> : null}
       <figure onClick={(event) => event.stopPropagation()} onTouchStart={(event) => { touchStart.current = event.touches[0].clientX; }} onTouchEnd={(event) => { const delta = event.changedTouches[0].clientX - touchStart.current; if (Math.abs(delta) > 50) delta > 0 ? previous() : next(); }}>
         <img src={image.src} alt={image.title} />
         <figcaption>{image.title}</figcaption>
       </figure>
-      {images.length > 1 ? <button className="lightbox-arrow next" onClick={(event) => { event.stopPropagation(); next(); }} aria-label="Ảnh sau" type="button">›</button> : null}
+      {images.length > 1 ? <button className="lightbox-arrow next" onClick={(event) => { event.stopPropagation(); next(); }} aria-label="Ảnh sau" type="button"><span className="lightbox-arrow-icon" aria-hidden="true" /></button> : null}
     </div>
   );
 }
