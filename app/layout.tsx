@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import { headers } from "next/headers";
-import { Cormorant_Garamond, Manrope, Parisienne } from "next/font/google";
+import { Be_Vietnam_Pro } from "next/font/google";
 import { coupleNames, weddingConfig } from "@/config/wedding";
 import "./globals.css";
 
-const display = Cormorant_Garamond({ variable: "--font-display", subsets: ["latin", "vietnamese"], weight: ["400", "500", "600"] });
-const body = Manrope({ variable: "--font-body", subsets: ["latin", "vietnamese"], weight: ["400", "500", "600"] });
-const script = Parisienne({ variable: "--font-script", subsets: ["latin", "latin-ext"], weight: "400" });
+const body = Be_Vietnam_Pro({ variable: "--font-body", subsets: ["latin", "vietnamese"], weight: ["400", "500", "600"] });
 
 export async function generateMetadata(): Promise<Metadata> {
   const incoming = await headers();
@@ -25,5 +23,9 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="vi"><body className={`${display.variable} ${body.variable} ${script.variable}`}>{children}</body></html>;
+  const fontFamilies = {
+    "--font-body": body.style.fontFamily,
+  } as React.CSSProperties;
+
+  return <html lang="vi"><body className={body.variable} style={fontFamilies}>{children}</body></html>;
 }

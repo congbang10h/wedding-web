@@ -15,9 +15,19 @@ function calculate(target: string): TimeLeft {
 }
 
 export function Countdown({ target }: { target: string }) {
-  const [time, setTime] = useState<TimeLeft>(() => calculate(target));
+  // Keep the server render and the client's first render identical. The real
+  // time is calculated only after hydration, avoiding a one-second mismatch.
+  const [time, setTime] = useState<TimeLeft>({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
   useEffect(() => {
-    const timer = window.setInterval(() => setTime(calculate(target)), 1000);
+    const update = () => setTime(calculate(target));
+    update();
+    const timer = window.setInterval(update, 1000);
     return () => window.clearInterval(timer);
   }, [target]);
 

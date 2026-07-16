@@ -14,14 +14,14 @@ export default function Home() {
   const { couple, hero } = weddingConfig;
   return (
     <main id="top">
-      <Navigation musicUrl={weddingConfig.backgroundMusic} />
+      <Navigation musicUrl={weddingConfig.backgroundMusic} names={coupleNames} />
       <section className="hero" style={{ backgroundImage: `linear-gradient(180deg, rgba(31,39,31,.16), rgba(22,29,24,.58)), url(${hero.image})` }} aria-label="Thiệp cưới trực tuyến">
         <div className="hero-topline"><span>We are getting married</span><span>Ho Chi Minh City · Vietnam</span></div>
         <div className="hero-content">
           <p className="hero-kicker">Save the date</p>
           <h1><span>{couple.bride.name}</span><i>&</i><span>{couple.groom.name}</span></h1>
           <div className="hero-date"><span />{weddingConfig.displayDate}<span /></div>
-          <a className="hero-button" href="#loi-moi">Xem thiệp cưới <b aria-hidden>↓</b></a>
+          <a className="hero-button" href="#thiep-cuoi" aria-label="Xem phần thiệp cưới">Xem thiệp cưới <b aria-hidden>↓</b></a>
         </div>
         <p className="hero-side-text">Together is a beautiful place to be</p>
       </section>
@@ -39,7 +39,7 @@ export default function Home() {
       <CoupleIntro bride={couple.bride} groom={couple.groom} />
       <EventSchedule events={weddingConfig.events} weddingDate={weddingConfig.weddingDate} />
       <InvitationCard cards={weddingConfig.invitationCards} />
-      <WeddingGallery initialPhotos={weddingConfig.gallery} source={weddingConfig.gallerySource} />
+      <WeddingGallery initialPhotos={weddingConfig.gallery} source={weddingConfig.gallerySource} folderUrl={weddingConfig.galleryFolderUrl} />
       {weddingConfig.showGiftSection ? <GiftSection accounts={weddingConfig.bankAccounts} /> : null}
       {weddingConfig.showRSVP ? <RSVPForm deadline={weddingConfig.rsvp.deadline} /> : null}
       <Wishes wishes={weddingConfig.wishes} />

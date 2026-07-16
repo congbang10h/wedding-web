@@ -11,7 +11,7 @@ const links = [
   ["Quà mừng", "#qua-mung"],
 ];
 
-export function Navigation({ musicUrl }: { musicUrl: string }) {
+export function Navigation({ musicUrl, names }: { musicUrl: string; names: string }) {
   const [open, setOpen] = useState(false);
   const [playing, setPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -35,7 +35,7 @@ export function Navigation({ musicUrl }: { musicUrl: string }) {
 
   return (
     <header className="site-nav" aria-label="Điều hướng chính">
-      <a className="nav-monogram" href="#top" aria-label="Về đầu trang">M<span>&</span>N</a>
+      <a className="nav-monogram" href="#top" aria-label="Về đầu trang">{names}</a>
       <nav className={open ? "nav-links is-open" : "nav-links"}>
         {links.map(([label, href]) => (
           <a key={href} href={href} onClick={() => setOpen(false)}>{label}</a>

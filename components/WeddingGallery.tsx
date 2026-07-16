@@ -6,7 +6,7 @@ import { normalizeWeddingPhoto } from "@/lib/googleDrive";
 import { ImageLightbox } from "./ImageLightbox";
 import { Reveal } from "./Reveal";
 
-export function WeddingGallery({ initialPhotos, source }: { initialPhotos: readonly WeddingPhoto[]; source: "config" | "drive-api" }) {
+export function WeddingGallery({ initialPhotos, source, folderUrl }: { initialPhotos: readonly WeddingPhoto[]; source: "config" | "drive-api"; folderUrl?: string }) {
   const [photos, setPhotos] = useState<WeddingPhoto[]>(() => initialPhotos.map(normalizeWeddingPhoto));
   const [selected, setSelected] = useState<number | null>(null);
   const [loading, setLoading] = useState(source === "drive-api");
@@ -34,7 +34,10 @@ export function WeddingGallery({ initialPhotos, source }: { initialPhotos: reado
     <section id="album" className="section gallery-section">
       <Reveal className="section-heading split-heading">
         <div><p className="eyebrow">Our moments</p><h2>Chuyện tình qua những khung hình</h2></div>
-        <p>Những khoảnh khắc bình yên, rực rỡ và rất đỗi riêng tư trên hành trình về chung một nhà.</p>
+        <div className="gallery-intro-copy">
+          <p>Những khoảnh khắc bình yên, rực rỡ và rất đỗi riêng tư trên hành trình về chung một nhà.</p>
+          {folderUrl ? <a className="text-link gallery-drive-link" href={folderUrl} target="_blank" rel="noreferrer">Mở album gốc trên Drive <span aria-hidden>↗</span></a> : null}
+        </div>
       </Reveal>
       {loading ? <div className="gallery-loading"><span /><span /><span /></div> : null}
       {loadError ? <p className="status-message error">{loadError} Vui lòng kiểm tra cấu hình chia sẻ thư mục.</p> : null}
