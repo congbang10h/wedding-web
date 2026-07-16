@@ -35,8 +35,8 @@ export const weddingConfig = {
         "Một chàng trai điềm tĩnh, chân thành và luôn tin rằng gia đình là hành trình đẹp nhất.",
     },
   },
-  weddingDate: "2026-12-20T11:00:00+07:00",
-  displayDate: "20 · 12 · 2026",
+  weddingDate: "2027-05-08T09:30:00+07:00",
+  displayDate: "08 · 05 · 2027",
   invitationMessage:
     "Trân trọng kính mời bạn đến chung vui trong ngày lễ thành hôn của chúng tôi. Sự hiện diện của bạn là niềm vinh hạnh và là món quà ý nghĩa đối với gia đình chúng tôi.",
   hero: {
@@ -48,12 +48,12 @@ export const weddingConfig = {
     {
       eyebrow: "Lễ vu quy",
       title: "Nhà gái",
-      date: "Chủ Nhật, 20 tháng 12 năm 2026",
+      date: "Thứ Bảy, 08 tháng 05 năm 2027",
       receptionTime: "09:00 · Đón khách",
       ceremonyTime: "09:30 · Làm lễ",
       venue: "Tư gia nhà gái",
-      address: "123 Đường Hoa Hồng, Quận 3, TP. Hồ Chí Minh",
-      mapsUrl: "https://maps.google.com/?q=Ho+Chi+Minh+City",
+      address: "90 Nguyễn Háo Vĩnh, Tân Phú, TP. Hồ Chí Minh",
+      mapsUrl: "https://www.google.com/maps/search/?api=1&query=90%20Nguy%E1%BB%85n%20H%C3%A1o%20V%C4%A9nh%2C%20T%C3%A2n%20Ph%C3%BA%2C%20TP.%20H%E1%BB%93%20Ch%C3%AD%20Minh",
     },
     {
       eyebrow: "Tiệc thành hôn",
