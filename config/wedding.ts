@@ -1,3 +1,5 @@
+import { driveGalleryPhotos } from "./gallery";
+
 export type WeddingPhoto = {
   id?: string;
   src?: string;
@@ -78,7 +80,7 @@ export const weddingConfig = {
       downloadEnabled: true,
     },
   ],
-  gallery: [
+  galleryLegacy: [
     { id: "179fk1R94vjMcOzfl2CYIFAk7kXQPv3ps", title: "Ảnh cưới TT0408" },
     { id: "1qtBqN6p7FFgeYfIw5wjUm3XnDVbPL0SO", title: "Ảnh cưới TT0409" },
     { id: "1QqMGDjUgZsIQ6nePONZF0V5WQcT7ASte", title: "Ảnh cưới TT0410" },
@@ -180,6 +182,7 @@ export const weddingConfig = {
     { id: "1SyVqSxhfhv_Mb0JLSqn04kB_CTheL4D1", title: "Ảnh cưới TT0506" },
     { id: "1QiqZAtxxa5I4dl3yQstoCBTPwtDfo_i-", title: "Ảnh cưới TT0507" },
   ] satisfies WeddingPhoto[],
+  gallery: driveGalleryPhotos,
   gallerySource: "config" as "config" | "drive-api",
   galleryFolderUrl: "https://drive.google.com/drive/folders/1BmvUXa5b5tLehNfPhtl4BWTU8Twsqg8T",
   bankAccounts: [
