@@ -222,7 +222,7 @@ export const weddingConfig = {
   ],
   seo: {
     public: false,
-    title: "Diễm My & Công Bằng · 20.12.2026",
+    title: "Diễm My & Công Bằng · 08.05.2027",
     description: "Trân trọng mời bạn đến chung vui trong ngày thành hôn của Diễm My và Công Bằng.",
   },
 } as const;

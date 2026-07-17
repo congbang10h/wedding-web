@@ -17,8 +17,8 @@ export async function generateMetadata(): Promise<Metadata> {
     description: weddingConfig.seo.description,
     robots: weddingConfig.seo.public ? { index: true, follow: true } : { index: false, follow: false },
     icons: { icon: "/og.png", shortcut: "/og.png", apple: "/og.png" },
-    openGraph: { type: "website", locale: "vi_VN", url: base, siteName: coupleNames, title: weddingConfig.seo.title, description: weddingConfig.seo.description, images: [{ url: new URL("/og.png", base), width: 1200, height: 630, alt: `Thiệp cưới ${coupleNames}` }] },
-    twitter: { card: "summary_large_image", title: weddingConfig.seo.title, description: weddingConfig.seo.description, images: [new URL("/og.png", base)] },
+    openGraph: { type: "website", locale: "vi_VN", url: base, siteName: coupleNames, title: weddingConfig.seo.title, description: weddingConfig.seo.description, images: [{ url: new URL("/invitations/thiep-cuoi-mat-truoc.png", base), width: 1484, height: 1060, alt: `Thiệp cưới ${coupleNames} · 08.05.2027` }] },
+    twitter: { card: "summary_large_image", title: weddingConfig.seo.title, description: weddingConfig.seo.description, images: [new URL("/invitations/thiep-cuoi-mat-truoc.png", base)] },
   };
 }
 
