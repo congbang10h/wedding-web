@@ -41,7 +41,7 @@ export const weddingConfig = {
     "Trân trọng kính mời bạn đến chung vui trong ngày lễ thành hôn của chúng tôi. Sự hiện diện của bạn là niềm vinh hạnh và là món quà ý nghĩa đối với gia đình chúng tôi.",
   hero: {
     image:
-      "https://lh3.googleusercontent.com/d/1ruzQvsLI33S45QLVsxJf_okFK1Fj3UbJ=w2400",
+      "https://lh3.googleusercontent.com/d/1ti4Jpw3Cy51zPwveyyx2K3yXeQCaxM68=w2400",
     imageAlt: "Ảnh bìa cưới của Diễm My và Công Bằng",
   },
   events: [
